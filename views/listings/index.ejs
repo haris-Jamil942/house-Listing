@@ -1,0 +1,26 @@
+<% layout("layouts/boilerplate") %>
+<!-- Search Bar -->
+<form action="/listings/search" method="GET" class="search-bar">
+  <div class="search-input">
+    <input type="text" name="q" placeholder="Search destinations" required />
+  </div>
+
+  <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+</form>
+<div class="main">
+<h3>All Listings</h3>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-6">
+    <% for(listing of allListings){ %>
+        <a href="/listings/<%= listing.id %>" class="link-tag">
+            <div class="card card-listing col">
+                <img src="<%= listing.image.url %>" class="card-img-top" alt="listing-image">
+                <div class="card-body">
+                    <h5 class="card-title"><%= listing.title %></h5>
+                    <p class="card-text"><%= listing.description %></p>
+                    <b><p>&#8360; <%= listing.price.toLocaleString('en-PK') %>/Night</p></b>
+                </div>
+            </div>
+        </a>
+    <% } %>
+</div>
+</div>

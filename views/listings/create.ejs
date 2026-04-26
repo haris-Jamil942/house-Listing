@@ -1,0 +1,70 @@
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <div class="col-6 offset-3">
+    <h3 class="mb-3">Create Your Listing</h3>
+    <form
+      method="post"
+      action="/listings"
+      novalidate
+      class="needs-validation"
+      enctype="multipart/form-data"
+    >
+      <label for="title" class="form-label">Enter Your Title</label>
+      <input
+        type="text"
+        name="listing[title]"
+        class="form-control"
+        placeholder="enter your title"
+        required
+      />
+      <div class="valid-feedback">Title Looks good!</div>
+      <div class="invalid-feedback">Invalid Title</div>
+      <label for="description" class="form-label">Enter Your Description</label>
+      <textarea
+        name="listing[description]"
+        class="form-control"
+        placeholder="enter your description"
+        required
+      ></textarea>
+      <div class="invalid-feedback">Write Valid Description</div>
+
+      <label for="image" class="form-label">Upload Your Image</label>
+      <input type="file" name="listing[image]" class="form-control" required />
+
+      <div class="row">
+        <div class="col-4">
+          <label for="price" class="form-label">Enter Your Price</label>
+          <input
+            type="text"
+            name="listing[price]"
+            class="form-control"
+            placeholder="enter your price"
+            required
+          />
+          <div class="invalid-feedback">Invalid Price</div>
+        </div>
+        <div class="col-8">
+          <label for="country" class="form-label">Enter Your country</label>
+          <input
+            type="text"
+            name="listing[country]"
+            class="form-control"
+            placeholder="Country name"
+            required
+          />
+        </div>
+        <div class="invalid-feedback">Invalid Country</div>
+      </div>
+      <label for="location" class="form-label">Enter Your location</label>
+      <input
+        type="text"
+        name="listing[location]"
+        class="form-control"
+        placeholder="Address"
+        required
+      />
+      <div class="invalid-feedback">Enter Right Location</div>
+      <button class="btn btn-dark edit-btn mt-3">Add</button>
+    </form>
+  </div>
+</div>
