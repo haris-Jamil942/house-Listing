@@ -22,10 +22,8 @@ A full-stack **House Listing web application** built using the MERN stack. This 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- React.js
-- React Router DOM
 - HTML5, CSS3, JavaScript
-- Bootstrap / Tailwind CSS / Custom CSS
+- Bootstrap / Custom CSS
 
 ### Backend
 - Node.js
